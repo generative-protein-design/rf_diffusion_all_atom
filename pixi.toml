@@ -1,18 +1,11 @@
 [workspace] 
-channels = [
-    "pytorch",
-    "https://conda.rosettacommons.org",
-    "dglteam/label/cu118",
-    "conda-forge",
-    "nvidia",
-    "pyg",
-]
-
-platforms = ["linux-64"]
+channels = ["https://prefix.dev/conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64", "osx-64"]
 preview = ["pixi-build"]
 
 [dependencies] 
 rf_diffusion_all_atom = { path = "." }
+
 
 [package] 
 name = "rf_diffusion_all_atom"
