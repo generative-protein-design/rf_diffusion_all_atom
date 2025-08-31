@@ -1,0 +1,71 @@
+context:
+  version: "0.1.0"
+
+package:
+  name: rf_diffusion_all_atom_conda
+  version: ${{ version }}
+
+source:
+    path: .
+
+build:
+  noarch: python 
+  script: pip install . -v
+
+requirements:
+  host:
+    - pip
+    - python >=3.9,<3.10
+    - setuptools
+    - wheel
+    - hatchling
+  run:
+    - python >= 3.9,<3.10
+    - pip
+    - numpy
+    - scipy
+    - pandas
+    - matplotlib
+    - seaborn
+    - scikit-learn
+    - pillow
+    - h5py
+    - aiohttp
+    - captum
+    - hydra-core
+    - omegaconf
+    - pydantic
+    - numba
+    - networkx
+    - tqdm
+    - typing-extensions
+    - yaml
+    - ipython
+    - jupyterlab
+    - pytorch
+    - torchvision
+    - icecream
+    - openbabel
+    - assertpy
+    - opt_einsum
+    - e3nn
+    - fire
+    - dgl = 1.1.0
+    - torchaudio
+    - torchmetrics
+    - torchdata
+
+
+tests:
+  - python:
+      imports:
+        - python_rich 
+
+about:
+  homepage: https://github.com/ipython/ipywidgets
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Jupyter Interactive Widgets
+  description: |
+    ipywidgets are interactive HTML widgets for Jupyter notebooks and the IPython kernel.
+  documentation: https://ipywidgets.readthedocs.io/en/latest/
