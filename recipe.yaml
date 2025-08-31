@@ -2,7 +2,7 @@ context:
   version: "0.1.0"
 
 package:
-  name: rf_diffusion_all_atom_conda
+  name: rf_diffusion_all_atom
   version: ${{ version }}
 
 source:
@@ -59,7 +59,7 @@ requirements:
 tests:
   - python:
       imports:
-        - python_rich 
+        - rf_diffusion_all_atom 
 
 about:
   homepage: https://github.com/ipython/ipywidgets
