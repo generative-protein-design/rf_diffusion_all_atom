@@ -15,6 +15,13 @@ See https://hydra.cc/docs/advanced/hydra-command-line-flags/ for more options.
 """
 
 import os
+import sys
+
+
+import rf_diffusion_all_atom
+module_path = os.path.dirname(rf_diffusion_all_atom.__file__)
+sys.path.append(module_path)
+
 
 import re
 import os, time, pickle
